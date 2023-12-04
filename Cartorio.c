@@ -7,7 +7,7 @@ int registro() //Função responsável por cadastrar os usuários no sistema
 {
 	//início criação de variáveis/string
 	char arquivo[40];
-	char cpf[40]; // entre colhetes o 40 criando uma string do tipo 40
+	char cpf[40]; // entre colchetes o 40 criando uma string do tipo 40
 	char nome[40];
 	char sobrenome[40];
 	char cargo[40];
@@ -126,6 +126,7 @@ int main()
 		printf("\t1 - Registrar nomes\n");
 		printf("\t2 - Consultar nomes\n");
 		printf("\t3 - Deletar nomes\n\n");
+		printf("\t4 - Sair do sistema\n\n");
 		printf("opcao:\n\n"); //fim do menu
 		
 		scanf("%d", &opcao); //Armazenando a escolha do usuário
@@ -145,6 +146,11 @@ int main()
 			
 			case 3:
 			deletar(); //chamada de funções
+			break;
+			
+			case 4:
+			printf("Obrigado por utilizar o sistema!\n");
+			return 0; //retorna valor 0 quebra laço, função etc sai do sistema
 			break;
 			
 			default:
